@@ -1,0 +1,23 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the bonAppetit function below.
+def bonAppetit(bill, k, b):
+    sum=0
+    for i in range(len(bill)):
+        if i!=k:
+            sum+=bill[i]
+
+    sum=int(sum/2)    
+    if b > sum :
+        print(b-sum)        
+    elif sum==b:
+        print('Bon Appetit')
+
+bill = [3, 10, 2 ,9]
+bonAppetit(bill, 1, 12)
